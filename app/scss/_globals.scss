@@ -1,0 +1,81 @@
+html {
+  font-size: 0.625rem;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  line-height: 1.3;
+  font-size: $fontdefault;
+  color: $greyBlue;
+  font-weight: 300;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+// utility classes
+.flex {
+  display: flex;
+
+  &.jc__sa {
+    justify-content: space-around;
+  }
+  &.jc__sb {
+    justify-content: space-between;
+  }
+  &.jc__c {
+    justify-content: center;
+  }
+  &.al__c {
+    align-items: center;
+  }
+}
+
+// buttons
+button,
+.button {
+  padding: 1.4rem 3rem;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(to right, $limegreen, $cyan);
+  color: white;
+  font-weight: 700;
+  font-size: $fontSmall;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+// visibility
+.hide-mobile__view {
+  @include breakpointsDown(medium) {
+    display: none;
+  }
+}
+
+.hide-desktop__view {
+  @include breakpointsUp(large) {
+    display: none;
+  }
+}
+
+// container
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

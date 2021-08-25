@@ -1,0 +1,23 @@
+// breakpoints
+$device__up: (
+  'medium': 640px,
+  'large': 1024px,
+  'xlarge': 1440px,
+);
+$device__down: (
+  'small': 639px,
+  'medium': 1023px,
+  'large': 1339px,
+);
+
+@mixin breakpointsUp($size) {
+  @media (min-width: map-get($device__up,$size)) {
+    @content;
+  }
+}
+
+@mixin breakpointsDown($size) {
+  @media (max-width: map-get($device__down,$size)) {
+    @content;
+  }
+}
