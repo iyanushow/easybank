@@ -1,4 +1,4 @@
-header {
+.header {
   background-color: $white;
   // mobile nav open styles
   .overlay {
@@ -18,8 +18,7 @@ header {
     }
     background: $white;
     position: relative;
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
+
     .hamburger {
       & > span {
         display: block;
@@ -66,11 +65,6 @@ header {
         }
       }
     }
-
-    @include breakpointsUp(large) {
-      max-width: 80%;
-      margin: 0 auto;
-    }
   }
 
   .header__menu {
@@ -83,7 +77,7 @@ header {
     top: 9rem;
     width: 90%;
     left: 50%;
-
+    z-index: 100;
     ul {
       width: 100%;
       flex-direction: column;
