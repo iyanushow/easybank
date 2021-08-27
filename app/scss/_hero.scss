@@ -1,11 +1,12 @@
 .hero {
   background-color: $lightGray;
+  position: relative;
+
   &__image {
-    position: relative;
     height: 85vw;
     max-height: 65.5rem;
     width: 100%;
-
+    position: relative;
     &::before {
       content: '';
       position: absolute;
@@ -53,16 +54,30 @@
     &__image {
       order: 2;
       flex: 3;
+      position: static;
       &::before {
         background-image: url('/images/bg-intro-desktop.svg');
-        background-position: 0 100%;
-        width: 150%;
+        background-position: left center;
+        width: 70%;
+        right: -15%;
+
+        height: 100%;
       }
       &::after {
         height: 120%;
-        background-size: 120%;
         background-position: 0 bottom;
       }
+    }
+  }
+
+  @include breakpointsUp(xlarge) {
+    &__image {
+      &::after {
+        background-size: 60%;
+      }
+    }
+    .container {
+      margin: 0 auto 0 20rem;
     }
   }
 }

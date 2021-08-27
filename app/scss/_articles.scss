@@ -3,7 +3,7 @@
   margin-bottom: 5rem;
   padding: 2rem;
   h2 {
-    padding: 0 40px;
+    text-align: center;
   }
   &__details {
     padding: 2rem;
@@ -13,7 +13,7 @@
   &__grid {
     gap: 1.5rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -49,13 +49,8 @@
   }
 
   @include breakpointsUp(large) {
-    &__grid {
-      justify-content: space-between;
-    }
-    &__icon {
-      margin-bottom: 3rem;
-    }
-    &__item {
+    &__item,
+    h2 {
       text-align: left;
     }
   }

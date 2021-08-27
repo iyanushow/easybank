@@ -298,13 +298,14 @@ p {
 
 .hero {
   background-color: #fafafa;
+  position: relative;
 }
 
 .hero__image {
-  position: relative;
   height: 85vw;
   max-height: 65.5rem;
   width: 100%;
+  position: relative;
 }
 
 .hero__image::before {
@@ -365,16 +366,27 @@ p {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
+    position: static;
   }
   .hero__image::before {
     background-image: url("/images/bg-intro-desktop.svg");
-    background-position: 0 100%;
-    width: 150%;
+    background-position: left center;
+    width: 70%;
+    right: -15%;
+    height: 100%;
   }
   .hero__image::after {
     height: 120%;
-    background-size: 120%;
     background-position: 0 bottom;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__image::after {
+    background-size: 60%;
+  }
+  .hero .container {
+    margin: 0 auto 0 20rem;
   }
 }
 
@@ -428,10 +440,11 @@ p {
 .article {
   background-color: #fafafa;
   margin-bottom: 5rem;
+  padding: 2rem;
 }
 
 .article h2 {
-  padding: 0 40px;
+  text-align: center;
 }
 
 .article__details {
@@ -444,9 +457,8 @@ p {
   gap: 1.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -495,15 +507,8 @@ p {
 }
 
 @media (min-width: 1024px) {
-  .article__grid {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .article__icon {
-    margin-bottom: 3rem;
-  }
-  .article__item {
+  .article__item,
+  .article h2 {
     text-align: left;
   }
 }
