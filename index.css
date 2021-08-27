@@ -311,7 +311,7 @@ p {
 .hero__image::before {
   content: '';
   position: absolute;
-  background-image: url("/public/bg-intro-mobile.svg");
+  background-image: url("public/bg-intro-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -324,7 +324,7 @@ p {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url("/public/image-mockups.png");
+  background: url("public/image-mockups.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -369,7 +369,7 @@ p {
     position: static;
   }
   .hero__image::before {
-    background-image: url("/public/bg-intro-desktop.svg");
+    background-image: url("./public/bg-intro-desktop.svg");
     background-position: left center;
     width: 70%;
     right: -15%;
