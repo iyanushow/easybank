@@ -15,5 +15,5 @@
 .DS_Store
 
 scss/
-.sass-cache*
-.css.map
+*.sass-cache
+*.css.map
