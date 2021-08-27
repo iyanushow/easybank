@@ -1,0 +1,35 @@
+.feature {
+  background-color: $greyBlueLight;
+  &__details {
+    max-width: 50ch;
+    margin-bottom: 5rem;
+    padding: 0 40px;
+  }
+  &__grid {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    flex-basis: 220px;
+    text-align: center;
+  }
+  &__icon {
+    margin-bottom: 2rem;
+  }
+
+  @include breakpointsUp(medium) {
+    &__grid {
+      justify-content: space-around;
+    }
+    &__icon {
+      margin-bottom: 3rem;
+    }
+    &__item {
+      flex-basis: 220px;
+      text-align: left;
+    }
+  }
+}
