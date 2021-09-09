@@ -2,8 +2,10 @@
 
 
 
-<h1 align="center">Easybank-webpage</h1>
+<h1 align="center"><a href='https://iyanushow.github.io/easybank/'> Easybank-webpage</a></h1>
 
+
+![Screenshot (146)](https://user-images.githubusercontent.com/62676042/132759277-3b779c40-d9a8-4ecf-8db6-0ed5a6e94f56.png)
 
 ### Overview
 
